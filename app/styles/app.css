@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.parent-container {
+  height: calc(100vh - 50px);
+  width: 100%;
+}
+
+.page-header {
+  height: 50px;
+  padding: 5px;
+  border-bottom: 1px solid black;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+}
+
+.main-content {
+  /* this breaks the annotation layer coordinates */
+  position: relative;
+}
+
+.page-sidebar {
+  border-right: 1px solid black;
+  padding: 5px;
+  width: 300px;
+}
+
+.scroll-container {
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+}
+
+.viewer-container {
+  margin: 0 auto;
+}

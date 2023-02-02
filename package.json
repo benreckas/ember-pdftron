@@ -20,10 +20,12 @@
     "lint:js:fix": "eslint . --fix",
     "start": "ember serve",
     "test": "npm-run-all lint test:*",
-    "test:ember": "ember test"
+    "test:ember": "ember test",
+    "move:pdftron": "cp -a ./node_modules/@pdftron/webviewer/public/. ./public/assets/webviewer"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
+    "@ember/render-modifiers": "^2.0.5",
     "@ember/test-helpers": "^2.6.0",
     "@glimmer/component": "^1.0.4",
     "@glimmer/tracking": "^1.0.4",
@@ -66,5 +68,8 @@
   },
   "ember": {
     "edition": "octane"
+  },
+  "dependencies": {
+    "@pdftron/webviewer": "^8.11.0"
   }
 }

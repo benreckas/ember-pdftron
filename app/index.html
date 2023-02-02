@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>EmberPdftron</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     {{content-for "head"}}
 
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/ember-pdftron.css">
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css" />
+    <link
+      integrity=""
+      rel="stylesheet"
+      href="{{rootURL}}assets/ember-pdftron.css"
+    />
 
     {{content-for "head-footer"}}
   </head>
@@ -20,5 +24,15 @@
     <script src="{{rootURL}}assets/ember-pdftron.js"></script>
 
     {{content-for "body-footer"}}
+
+    <!-- PDFTron -->
+    <script
+      type="text/javascript"
+      src="{{rootURL}}assets/webviewer/core/webviewer-core.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{{rootURL}}assets/webviewer/core/pdf/PDFNet.js"
+    ></script>
   </body>
 </html>

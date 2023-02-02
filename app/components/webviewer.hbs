@@ -1,0 +1,21 @@
+<div class='parent-container'>
+  <header class='page-header'>
+    <h1>Demo App</h1>
+  </header>
+
+  <div class='grid'>
+    <aside class='page-sidebar'>
+      <h2>Side Nav</h2>
+    </aside>
+
+    <main class='main-content'>
+      <div
+        {{did-insert this.initializeViewer}}
+        id='ScrollContainer'
+        class='scroll-container'
+      >
+        <div id='ViewerContainer' class='viewer-container'></div>
+      </div>
+    </main>
+  </div>
+</div>
