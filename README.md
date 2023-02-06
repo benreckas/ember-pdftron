@@ -1,3 +1,8 @@
+## Dependencies
+
+- [yarn](https://yarnpkg.com/)
+- [ember-cli](https://cli.emberjs.com/release/)
+
 ## Installation
 
 - `git clone <repository-url>` this repository
