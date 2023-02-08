@@ -30,7 +30,15 @@
 .page-sidebar {
   border-right: 1px solid black;
   padding: 5px;
+  width: 50px;
+}
+
+.page-sidebar.expanded {
   width: 300px;
+}
+
+.page-sidebar button {
+  font-size: 20px;
 }
 
 .scroll-container {

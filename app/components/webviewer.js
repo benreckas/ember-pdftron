@@ -7,6 +7,7 @@ export default class WebviewerComponent extends Component {
   Annotations = window.Annotations;
   Tools = window.Tools;
 
+  @tracked isExpanded = true;
   @tracked documentViewer;
 
   // dom elements
@@ -35,6 +36,18 @@ export default class WebviewerComponent extends Component {
     documentViewer.setViewerElement(this.viewerContainer);
     documentViewer.enableAnnotations();
 
+    /**
+     * Fixes initial render until another element causes a layout shift.
+     * Collapsing or expanding the side navigation will cause the annotation
+     * layer to fall out of synch again.
+     */
+    documentViewer.getDisplayModeManager().disableVirtualDisplayMode();
+
     this.documentViewer = documentViewer;
+  }
+
+  @action
+  toggleIsExpanded() {
+    this.isExpanded = !this.isExpanded;
   }
 }

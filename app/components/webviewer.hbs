@@ -4,8 +4,14 @@
   </header>
 
   <div class='grid'>
-    <aside class='page-sidebar'>
-      <h2>Side Nav</h2>
+    <aside class='page-sidebar {{if this.isExpanded "expanded"}}'>
+      <button {{on 'click' this.toggleIsExpanded}}>
+        {{#if this.isExpanded}}
+          &larr;
+        {{else}}
+          &rarr;
+        {{/if}}
+      </button>
     </aside>
 
     <main class='main-content'>
