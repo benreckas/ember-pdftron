@@ -18,7 +18,7 @@ export default class WebviewerComponent extends Component {
   async initializeViewer() {
     this.Core.setWorkerPath('/assets/webviewer/core');
     this.Core.enableFullPDF();
-    this.Core.PDFNet.initialize(null);
+    this.Core.PDFNet.initialize();
 
     this.setupDocumentViewer();
 
