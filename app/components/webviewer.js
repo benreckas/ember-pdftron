@@ -17,12 +17,11 @@ export default class WebviewerComponent extends Component {
   @action
   async initializeViewer() {
     this.Core.setWorkerPath('/assets/webviewer/core');
-    this.Core.enableFullPDF();
-    this.Core.PDFNet.initialize(null);
+    await this.Core.PDFNet.initialize();
 
     this.setupDocumentViewer();
 
-    this.documentViewer.loadDocument('/assets/test_01.pdf');
+    await this.documentViewer.loadDocument('/assets/test_01.pdf');
 
     this.documentViewer.setToolMode(
       this.documentViewer.getTool(this.Tools.ToolNames.TEXT_SELECT)
