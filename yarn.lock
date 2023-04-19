@@ -2002,7 +2002,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pdftron/webviewer@npm:^10.0.0":
+"@pdftron/webviewer@npm:10.0.0":
   version: 10.0.0
   resolution: "@pdftron/webviewer@npm:10.0.0"
   checksum: 0b55930e016ffc28ddc60e437e787d354feb87ea139c35f536826b7eaa0319c5ac06f297e97f98939fd33857d6aa68a900181f39ed6774bcb265e705e7224f4b
@@ -6400,7 +6400,7 @@ __metadata:
     "@ember/test-helpers": "npm:^2.6.0"
     "@glimmer/component": "npm:^1.0.4"
     "@glimmer/tracking": "npm:^1.0.4"
-    "@pdftron/webviewer": "npm:^10.0.0"
+    "@pdftron/webviewer": "npm:10.0.0"
     babel-eslint: "npm:^10.1.0"
     broccoli-asset-rev: "npm:^3.0.0"
     ember-auto-import: "npm:^2.4.1"
