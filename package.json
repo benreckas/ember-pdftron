@@ -70,6 +70,6 @@
     "edition": "octane"
   },
   "dependencies": {
-    "@pdftron/webviewer": "^10.0.0"
+    "@pdftron/webviewer": "8.11.0"
   }
 }

@@ -4,8 +4,8 @@ import { tracked } from '@glimmer/tracking';
 
 export default class WebviewerComponent extends Component {
   Core = window.Core;
-  Annotations = window.Core.Annotations;
-  Tools = window.Core.Tools;
+  Annotations = window.Annotations;
+  Tools = window.Tools;
 
   @tracked documentViewer;
 
