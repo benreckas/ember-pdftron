@@ -33,14 +33,6 @@
   width: 50px;
 }
 
-.page-sidebar.expanded {
-  width: 300px;
-}
-
-.page-sidebar button {
-  font-size: 20px;
-}
-
 .scroll-container {
   height: 100%;
   overflow: auto;

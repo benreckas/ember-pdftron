@@ -4,10 +4,9 @@ import { tracked } from '@glimmer/tracking';
 
 export default class WebviewerComponent extends Component {
   Core = window.Core;
-  Annotations = window.Annotations;
-  Tools = window.Tools;
+  Annotations = window.Core.Annotations;
+  Tools = window.Core.Tools;
 
-  @tracked isExpanded = true;
   @tracked documentViewer;
 
   // dom elements
@@ -17,12 +16,11 @@ export default class WebviewerComponent extends Component {
   @action
   async initializeViewer() {
     this.Core.setWorkerPath('/assets/webviewer/core');
-    this.Core.enableFullPDF();
-    this.Core.PDFNet.initialize(null);
+    await this.Core.PDFNet.initialize();
 
     this.setupDocumentViewer();
 
-    this.documentViewer.loadDocument('/assets/test_01.pdf');
+    await this.documentViewer.loadDocument('/assets/test_01.pdf');
 
     this.documentViewer.setToolMode(
       this.documentViewer.getTool(this.Tools.ToolNames.TEXT_SELECT)
@@ -35,19 +33,8 @@ export default class WebviewerComponent extends Component {
     documentViewer.setScrollViewElement(this.scrollContainer);
     documentViewer.setViewerElement(this.viewerContainer);
     documentViewer.enableAnnotations();
-
-    /**
-     * Fixes initial render until another element causes a layout shift.
-     * Collapsing or expanding the side navigation will cause the annotation
-     * layer to fall out of synch again.
-     */
     documentViewer.getDisplayModeManager().disableVirtualDisplayMode();
 
     this.documentViewer = documentViewer;
-  }
-
-  @action
-  toggleIsExpanded() {
-    this.isExpanded = !this.isExpanded;
   }
 }
