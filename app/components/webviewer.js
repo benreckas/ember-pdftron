@@ -20,7 +20,7 @@ export default class WebviewerComponent extends Component {
 
     this.setupDocumentViewer();
 
-    await this.documentViewer.loadDocument('/assets/test_01.pdf');
+    await this.documentViewer.loadDocument('/assets/test.xlsx');
 
     this.documentViewer.setToolMode(
       this.documentViewer.getTool(this.Tools.ToolNames.TEXT_SELECT)
